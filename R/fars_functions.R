@@ -1,14 +1,9 @@
-##' @importFrom readr read_csv
-##' @importFrom dplyr tbl_df select mutate select filter group_by summarize
-##' @importFrom tidyr spread
-##' @importFrom maps map
-##' @importFrom graphics points
-NULL
-
 #' Creates and returns a data frame from a CSV file
 #'
 #' Will throw an error if no file matches the filename
 #'
+#' @importFrom readr read_csv
+#' @importFrom dplyr tbl_df
 #' @param filename character string of the name to the file
 #' @return a data.frame object
 #' @examples
@@ -42,7 +37,7 @@ make_filename <- function(year) {
 #'
 #' files must be in current working directory since the name make_filename
 #' function does not generate paths but rather only the name of file
-#'
+#' @importFrom dplyr mutate select %>%
 #' @param years either a vector or list of integers representing years
 #' @return a list of data.frame objects read in. List may contain NULL if
 #' a file with an input year does not exist
@@ -68,6 +63,8 @@ fars_read_years <- function(years) {
 #'
 #' Will first merge all csv files and then summarise the resulting single data frame.
 #'
+#' @importFrom dplyr bind_rows group_by summarize
+#' @importFrom tidyr spread
 #' @param years either a vector or list of integers representing years
 #' @return a matrix where columns represent year and rows represent months
 #' and the value of each cell is the total number of occurrences
@@ -90,6 +87,9 @@ fars_summarize_years <- function(years) {
 #' state in which they occur. Errors will be thrown if the inputted \code{state.num}
 #' or \code{year} is not valid
 #'
+#' @importFrom maps map
+#' @importFrom graphics points
+#' @importFrom dplyr filter
 #' @param state.num The unique integer value that identifies a state
 #' @param year An integer value that represents a year
 #' @return a plot of accident locations on a map of the state in which the accident
