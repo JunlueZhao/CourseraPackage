@@ -5,10 +5,6 @@
 ##' @importFrom graphics points
 NULL
 
-dummy <- function() {
-  return(3)
-}
-
 #' Creates and returns a data frame from a CSV file
 #'
 #' Will throw an error if no file matches the filename
