@@ -14,7 +14,7 @@ a matrix where columns represent year and rows represent months
 and the value of each cell is the total number of occurrences
 }
 \description{
-Will first merge all csv files and the summarise the resulting single data frame.
+Will first merge all csv files and then summarise the resulting single data frame.
 }
 \examples{
 fars_summarize_years(c(2016, 2017, 2018))
