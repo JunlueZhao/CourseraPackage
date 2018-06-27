@@ -1,0 +1,22 @@
+---
+title: "Coursera Course 3 Package"
+author: "Junlue Zhao"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Coursera Course 3 Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Rules to using this package:
+    You must set your working directory to the folder that contains the files
+    that you wish to process.
+    
+## There are two functions which are design for usage:
+    `fars_map_state(state.num, year)`
+        - This will display a map of the state; and the cluster of points within
+          the borders of that state represent the accidents.
+    `fars_summarize_years(years)`
+        - This will provide a summary of the data for the inputed years.
+    
