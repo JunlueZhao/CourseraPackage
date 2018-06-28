@@ -9,9 +9,6 @@ Encoding: UTF-8
 LazyData: true
 Suggests: knitr,
     testthat,
-    roxygen2,
-    devtools,
-    knitr,
     rmarkdown
 imports:
    dplyr,
