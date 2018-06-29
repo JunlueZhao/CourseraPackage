@@ -6,7 +6,7 @@
 #' @importFrom dplyr tbl_df
 #' @param filename character string of the name to the file
 #' @return a data.frame object
-#' @examples
+#' @examples \dontrun{}
 #' fars_read("C:/User/Documents/somefile.csv")
 #' @export
 fars_read <- function(filename) {
@@ -41,7 +41,7 @@ make_filename <- function(year) {
 #' @param years either a vector or list of integers representing years
 #' @return a list of data.frame objects read in. List may contain NULL if
 #' a file with an input year does not exist
-#' @examples
+#' @examples \dontrun{}
 #' fars_read_years(c(2016,2017,2018))
 #' fars_read_years(c(1996:2017))
 #' @export
@@ -68,7 +68,7 @@ fars_read_years <- function(years) {
 #' @param years either a vector or list of integers representing years
 #' @return a matrix where columns represent year and rows represent months
 #' and the value of each cell is the total number of occurrences
-#' @examples
+#' @examples \dontrun{}
 #' fars_summarize_years(c(2016, 2017, 2018))
 #' fars_summarize_years(c(1996:2017))
 #' @export
@@ -94,7 +94,7 @@ fars_summarize_years <- function(years) {
 #' @param year An integer value that represents a year
 #' @return a plot of accident locations on a map of the state in which the accident
 #' occurred
-#' @examples
+#' @examples \dontrun{}
 #' fars_map_state(40, 2013)
 #' @export
 fars_map_state <- function(state.num, year) {
