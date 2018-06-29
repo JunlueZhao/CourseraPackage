@@ -1,5 +1,5 @@
 test_that("fars_read does NOT work", {
-  filename <- system.file("/inst/extdata/accident_2015.csv.bz2",
+  filename <- system.file("/extdata/accident_2015.csv.bz2",
                           package="CourseraPackage")
   actual <- fars_read(filename)
   expect_equal(as.numeric(unlist(actual[5, "ST_CASE"])), 10005)

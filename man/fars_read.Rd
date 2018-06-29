@@ -16,5 +16,6 @@ a data.frame object
 Will throw an error if no file matches the filename
 }
 \examples{
+\dontrun{}
 fars_read("C:/User/Documents/somefile.csv")
 }

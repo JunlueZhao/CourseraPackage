@@ -17,6 +17,7 @@ and the value of each cell is the total number of occurrences
 Will first merge all csv files and then summarise the resulting single data frame.
 }
 \examples{
+\dontrun{}
 fars_summarize_years(c(2016, 2017, 2018))
 fars_summarize_years(c(1996:2017))
 }
