@@ -14,5 +14,5 @@ test_that("fars_read does NOT work", {
 test_that("make_filename does NOT work", {
   year <- 2018
   actual <- make_filename(year)
-  expect_equal(actual, "accident_2018.csv.bz2")
+  expect_equal(actual, system.file("/extdata/accident_2018.csv.bz2" ,package="CourseraPackage"))
 })
