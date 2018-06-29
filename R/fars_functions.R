@@ -6,8 +6,8 @@
 #' @importFrom dplyr tbl_df
 #' @param filename character string of the name to the file
 #' @return a data.frame object
-#' @examples \dontrun{}
-#' fars_read("C:/User/Documents/somefile.csv")
+#' @examples
+#' fars_read(system.file("/extdata/accident_2015.csv.bz2",package="CourseraPackage"))
 #' @export
 fars_read <- function(filename) {
   if(!file.exists(filename))
@@ -30,7 +30,8 @@ fars_read <- function(filename) {
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  system.file(sprintf("/extdata/accident_%d.csv.bz2", year),package="CourseraPackage")
+#  sprintf("accident_%d.csv.bz2", year)
 }
 
 #' Will process a group of csv files in the directory
@@ -41,9 +42,8 @@ make_filename <- function(year) {
 #' @param years either a vector or list of integers representing years
 #' @return a list of data.frame objects read in. List may contain NULL if
 #' a file with an input year does not exist
-#' @examples \dontrun{}
-#' fars_read_years(c(2016,2017,2018))
-#' fars_read_years(c(1996:2017))
+#' @examples
+#' fars_read_years(c(2013,2014,2015))
 #' @export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -68,9 +68,8 @@ fars_read_years <- function(years) {
 #' @param years either a vector or list of integers representing years
 #' @return a matrix where columns represent year and rows represent months
 #' and the value of each cell is the total number of occurrences
-#' @examples \dontrun{}
-#' fars_summarize_years(c(2016, 2017, 2018))
-#' fars_summarize_years(c(1996:2017))
+#' @examples
+#' fars_summarize_years(c(2013,2014,2015))
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -94,7 +93,7 @@ fars_summarize_years <- function(years) {
 #' @param year An integer value that represents a year
 #' @return a plot of accident locations on a map of the state in which the accident
 #' occurred
-#' @examples \dontrun{}
+#' @examples
 #' fars_map_state(40, 2013)
 #' @export
 fars_map_state <- function(state.num, year) {

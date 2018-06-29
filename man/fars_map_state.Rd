@@ -22,6 +22,5 @@ state in which they occur. Errors will be thrown if the inputted \code{state.num
 or \code{year} is not valid
 }
 \examples{
-\dontrun{}
 fars_map_state(40, 2013)
 }

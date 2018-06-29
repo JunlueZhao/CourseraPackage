@@ -18,7 +18,5 @@ files must be in current working directory since the name make_filename
 function does not generate paths but rather only the name of file
 }
 \examples{
-\dontrun{}
-fars_read_years(c(2016,2017,2018))
-fars_read_years(c(1996:2017))
+fars_read_years(c(2013,2014,2015))
 }
