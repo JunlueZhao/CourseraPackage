@@ -1,7 +1,9 @@
 Package: CourseraPackage
+Type: Package
 Title: SOmething
-Version: 0.0.0.9000
-Authors@R: person("Junlue", "Zhao", email = "jzhao31415@gmail.com", role = c("aut", "cre"))
+Version: 0.1.0
+Author: Junlue Zhao
+Maintainer: Junlue Zhao <jzhao31415@gmail.com>
 Description: What the package does (one paragraph).
 License: What license is it under?
 Encoding: UTF-8
